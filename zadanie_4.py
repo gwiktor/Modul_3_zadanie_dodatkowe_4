@@ -17,3 +17,19 @@ dice[7]
 Wynik powinien zawierać następujące elementy:
 {(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)}
 '''
+
+from random import choice
+
+dice = {}
+kostka =[]
+for k in range(1,7):
+  if k not in kostka:
+    kostka.append(k)
+
+print(kostka)
+
+x = choice(kostka)
+y = choice(kostka)
+
+print(x)
+print(y)
