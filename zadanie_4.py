@@ -18,18 +18,21 @@ Wynik powinien zawierać następujące elementy:
 {(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)}
 '''
 
-from random import choice
-
 dice = {}
 kostka =[]
 for k in range(1,7):
   if k not in kostka:
     kostka.append(k)
 
-print(kostka)
+minim = min(kostka)
+maxim = max(kostka)
+sum_min = min(kostka) + min(kostka)
+sum_max = max(kostka) + max(kostka)
 
-x = choice(kostka)
-y = choice(kostka)
 
-print(x)
-print(y)
+for suma in range(sum_min, sum_max + 1):
+    for x in kostka:
+        for y in kostka:
+            suma = sum(x, y)
+            dice[suma] = [(x, y)]
+print(dice[8])    
