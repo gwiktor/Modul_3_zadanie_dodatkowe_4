@@ -31,8 +31,12 @@ sum_max = max(kostka) + max(kostka)
 
 
 for suma in range(sum_min, sum_max + 1):
-    for x in kostka:
-        for y in kostka:
-            suma = sum(x, y)
-            dice[suma] = [(x, y)]
-print(dice[8])    
+  print(suma)
+  for x in kostka:
+    y = suma - x
+    for x + y <= suma:
+      print(y)
+        #for y in kostka:
+            #suma = sum(x, y)
+            #dice[suma] = [(x, y)]
+#print(suma)    
