@@ -33,15 +33,16 @@ sum_max = max(kostka) + max(kostka)
 oczka = [i for i in range(sum_min, sum_max)]
 
 
-def T(suma):
+
+for i in oczka:
     for x in kostka:
         for y in kostka:
-            if x+y==suma:
-                i=tuple([x, y])
-                liczba.append(i)
-    return liczba        
-# ta funkcja u dołu nie działa
-for i in oczka:
-    dice[i]=[T(i)]
+            if x+y==i:
+                liczba.append(tuple([x, y]))
+break
+    dice[i]=[liczba]        
+
 print(dice)
+
+
 
