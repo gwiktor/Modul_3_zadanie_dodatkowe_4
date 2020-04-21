@@ -33,8 +33,8 @@ sum_max = max(kostka) + max(kostka)
 for suma in range(sum_min, sum_max + 1):
   print(suma)
   for x in kostka:
-    y = suma - x
-    for x + y <= suma:
+    for y > 0:
+      y = suma - x
       print(y)
         #for y in kostka:
             #suma = sum(x, y)
