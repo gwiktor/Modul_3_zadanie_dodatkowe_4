@@ -40,9 +40,8 @@ def T(suma):
     return liczba        
 print(T(8))
 # poniższa pętla zamiast mi wyrzucać wartość jak tu wyżej podaje mi wszystkie możliwe rzuty kością
-"""
+
 for suma in range(sum_min, sum_max + 1):
     dice[suma]=[T(suma)]
 
 print(dice[8])
-"""
