@@ -30,6 +30,8 @@ minim = min(kostka)
 maxim = max(kostka)
 sum_min = min(kostka) + min(kostka)
 sum_max = max(kostka) + max(kostka)
+oczka = [i for i in range(sum_min, sum_max)]
+
 
 def T(suma):
     for x in kostka:
@@ -38,11 +40,7 @@ def T(suma):
                 i=tuple([x, y])
                 liczba.append(i)
     return liczba        
-print(T(8))
-# poniższa pętla zamiast mi wyrzucać wartość jak tu wyżej podaje mi wszystkie możliwe rzuty kością
-"""
-for suma in range(sum_min, sum_max + 1):
-    dice[suma]=[T(suma)]
+# ta funkcja u dołu nie działa
+dice[i]=[T(i) for i in oczka]
+print(dice)
 
-print(dice[8])
-"""
