@@ -20,6 +20,8 @@ Wynik powinien zawierać następujące elementy:
 
 dice = {}
 kostka =[]
+liczba=[]
+i =[]
 for k in range(1,7):
   if k not in kostka:
     kostka.append(k)
@@ -29,10 +31,18 @@ maxim = max(kostka)
 sum_min = min(kostka) + min(kostka)
 sum_max = max(kostka) + max(kostka)
 
-
-for suma in range(sum_min, sum_max + 1):
+def T(suma):
     for x in kostka:
         for y in kostka:
-            suma = sum(x, y)
-            dice[suma] = [(x, y)]
-print(dice[8])    
+            if x+y==suma:
+                i=tuple([x, y])
+                liczba.append(i)
+    return liczba        
+print(T(8))
+# poniższa pętla zamiast mi wyrzucać wartość jak tu wyżej podaje mi wszystkie możliwe rzuty kością
+"""
+for suma in range(sum_min, sum_max + 1):
+    dice[suma]=[T(suma)]
+
+print(dice[8])
+"""
