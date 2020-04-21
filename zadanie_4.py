@@ -21,7 +21,7 @@ Wynik powinien zawierać następujące elementy:
 dice = {}
 kostka =[]
 liczba=[]
-i =[]
+
 for k in range(1,7):
   if k not in kostka:
     kostka.append(k)
@@ -41,6 +41,7 @@ def T(suma):
                 liczba.append(i)
     return liczba        
 # ta funkcja u dołu nie działa
-dice[i]=[T(i) for i in oczka]
+for i in oczka:
+    dice[i]=[T(i)]
 print(dice)
 
