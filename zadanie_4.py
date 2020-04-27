@@ -20,7 +20,7 @@ Wynik powinien zawierać następujące elementy:
 
 dice = {}
 kostka =[]
-liczba=[]
+
 i =[]
 for k in range(1,7):
   if k not in kostka:
@@ -31,17 +31,18 @@ maxim = max(kostka)
 sum_min = min(kostka) + min(kostka)
 sum_max = max(kostka) + max(kostka)
 
-def T(suma):
+
+for suma in range(sum_min, sum_max +1):
+    liczba=[]
     for x in kostka:
         for y in kostka:
             if x+y==suma:
                 i=tuple([x, y])
                 liczba.append(i)
-    return liczba        
-print(T(8))
-# poniższa pętla zamiast mi wyrzucać wartość jak tu wyżej podaje mi wszystkie możliwe rzuty kością
+    dice[suma]=liczba
 
-for suma in range(sum_min, sum_max + 1):
-    dice[suma]=[T(suma)]
+print(dice)       
 
-print(dice[8])
+
+
+
